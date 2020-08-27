@@ -1,0 +1,144 @@
+.main-nav {
+  position: relative;
+
+  margin: 0 auto;
+}
+
+.main-nav__list {
+  list-style: none;
+
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav__logo {
+  background-color: #283645;
+  border-bottom: 1px solid #000000;
+}
+
+.main-nav__logo-link {
+  display: block;
+  color: #ffffff;
+
+  width: 75px;
+  padding-left: 20px;
+  padding-top: 22px;
+  padding-bottom: 16px;
+}
+
+
+.main-nav__logo-mobile {
+  .icon-action(#c72955, #ffffff);
+}
+
+.main-nav__logo-tablet {
+  display: none;
+}
+
+.main-nav__logo-desktop {
+  display: none;
+}
+
+.main-nav__toggle {
+  color: #ffffff;
+
+  position: absolute;
+  top: 20px;
+  right: 19px;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  .icon-action(#c72955, #ffffff);
+}
+
+@media (max-width: @gadgets-only) {
+  .main-nav--closed .site-list {
+    display: none;
+  }
+
+  .main-nav--closed .main-nav__logo {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: none;
+  }
+
+  .main-nav--closed .main-nav__opened-menu {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__closed-menu {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav__logo-link {
+    width: 150px;
+    padding-left: 20px;
+    padding-top: 27px;
+    padding-bottom: 42px;
+  }
+
+  .main-nav__logo-mobile {
+    display: none;
+  }
+
+  .main-nav__logo-tablet {
+    display: block;
+
+    .icon-action(#c72955, #ffffff);
+  }
+
+  .main-nav__toggle {
+    top: 43px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+
+    width: 1200px;
+
+    background-color: transparent;
+  }
+
+  .main-nav__logo {
+    width: 160px;
+    margin-left: 125px;
+
+    background-color: transparent;
+
+    border: none;
+  }
+
+  .main-nav__logo-link {
+    padding-left: 6px;
+  }
+
+  .main-nav__logo-tablet {
+    display: none;
+  }
+
+  .main-nav__logo-desktop {
+    display: block;
+    .icon-action(#c72955, #ffffff);
+  }
+
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__list {
+    margin-right: 90px;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}

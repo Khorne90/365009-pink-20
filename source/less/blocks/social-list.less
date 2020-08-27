@@ -1,0 +1,48 @@
+.social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  width: 177px;
+  padding-inline-start: 0;
+
+  list-style: none;
+}
+
+.social-list__link {
+  display: block;
+
+  color: #d22856;
+
+  width: 45px;
+  height: 45px;
+
+  text-align: center;
+
+  border: 3px solid #e9ebec;
+  border-radius: 50%;
+
+  &:hover,
+  &:focus {
+    border-color: #283645;
+  }
+
+  &:active {
+    color: fade(#d22856, 30%);
+    border-color: #e9ebec;
+  }
+}
+
+.social-list__twitter-icon {
+  padding-top: 15px;
+}
+
+.social-list__facebook-icon {
+  padding-top: 12px;
+  padding-right: 2px;
+}
+
+.social-list__youtube-icon {
+  padding-top: 15px;
+  padding-left: 2px;
+}

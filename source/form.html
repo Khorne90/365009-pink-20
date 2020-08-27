@@ -102,7 +102,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo">
-          <a class="main-nav__logo-link">
+          <a class="main-nav__logo-link" href="index.html">
             <svg class="main-nav__logo-mobile" width="75" height="23"><use xlink:href="#logo-mobile"></use></svg>
             <svg class="main-nav__logo-tablet" width="146.3" height="40.3"><use xlink:href="#logo-tablet"></use></svg>
             <svg class="main-nav__logo-desktop" width="146.3" height="40.3"><use xlink:href="#logo-desktop"></use></svg>
@@ -117,230 +117,125 @@
           </svg>
         </button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link site-list__link--active">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
           <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--active">Конкурс</a></li>
           <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Пинк - приложение для раскраски ваших фотографий</h1>
+      <h1 class="visually-hidden">Страница конкурса Pink</h1>
       <div class="page-main__wrapper">
-        <div class="page-main__index-bg container">
-          <p class="page-main__title page-main__title--index">Взгляните на жизнь иначе!</p>
-        </div>
+        <p class="page-main__title page-main__title--contest">Конкурс на самое безбашенное путешествие с Пинк</p>
       </div>
-      <div class="page-main__app-download-wrapper">
-        <section class="app-download">
-          <h2 class="visually-hidden">Загрузить приложение Pink</h2>
-          <a class="app-download__button button" href="https://apps.apple.com/ru/app/apple-store/id375380948">Скачать приложение</a>
-          <ul class="app-download__list platform-list">
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__apple" href="https://apps.apple.com/ru/app/apple-store/id375380948">
-                <svg width="46.21px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-apple"></use>
+      <section class="travel-contest">
+        <h2 class="visually-hidden">Форма конкурса</h2>
+        <p class="travel-contest__title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</p>
+        <form class="travel-contest__form contest-form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="contest-form__fieldset full-name">
+            <legend class="visually-hidden">ФИО</legend>
+            <ul class="contest-form__list">
+              <li>
+                <label class="contest-form__field-name" for="surname">Фамилия:</label>
+                <input class="contest-form__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию*">
+              </li>
+              <li>
+                <label class="contest-form__field-name" for="name">Имя:</label>
+                <input class="contest-form__field" type="text" id="name" name="name" placeholder="Введите ваше имя*">
+              </li>
+              <li>
+                <label class="contest-form__field-name" for="patronymic">Отчество:</label>
+                <input class="contest-form__field" type="text" id="patronymic" name="patronymic" placeholder="Ну и отчество тоже">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest-form__fieldset achievement">
+            <legend class="contest-form__field-name contest-form__field-name--title">Ваши безбашенные достижения в путешествии</legend>
+            <ul class="contest-form__list">
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-1" name="achievemt-1" checked>
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
-                <span class="visually-hidden">Apple</span>
-              </a>
-            </li>
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__android" href="https://play.google.com/store/apps">
-                <svg width="42.084px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-android" y="3"></use>
+                <label class="achievement__name" for="achievement-1">Сделал селфи с акулой</label>
+              </li>
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-2" name="achievemt-2" checked>
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
-                <span class="visually-hidden">Android</span>
-              </a>
-            </li>
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows">
-                <svg width="42.084px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-microsoft" y="4"></use>
+                <label class="achievement__name" for="achievement-2">Обгорел на пляже</label>
+              </li>
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-3" name="achievemt-3">
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
                 </svg>
-                <span class="visually-hidden">Windows</span>
-              </a>
-            </li>
-          </ul>
-          <p class="app-download__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </section>
-      </div>
-      <section class="app-advantages">
-        <h2 class="visually-hidden">Приемущества нашего приложения</h2>
-        <p class="app-advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="app-advantages__slogan">Нам есть, что вам предложить!</p>
-        <ul class="app-advantages__list advantages-list">
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Поднимает настроение</p>
-            <p class="advantages-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
-          </li>
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Меняет мир вокруг</p>
-            <p class="advantages-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </li>
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Заводит новых друзей</p>
-            <p class="advantages-list__text">Ставьте лайки, комментируйте, делитись фотографиями с друзьями и заводите новых</p>
-          </li>
-        </ul>
-      </section>
-      <section class="research">
-        <h2 class="visually-hidden">Научное исследование нашего приложения</h2>
-        <div class="research__wrapper">
-          <p class="research__slogan">Эффект на 24 часа!</p>
-          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class="research__link" href="#">Узнать больше об исследовании</a>
-        </div>
-      </section>
-      <section class="reviews">
-        <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
-        <p class="reviews__autor">Николай Петров</p>
-        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        <ul class="slider-toggles">
-          <li><button class="slider-toggles__item slider-toggles__item--active" type="button"></button></li>
-          <li><button class="slider-toggles__item" type="button"></button></li>
-          <li><button class="slider-toggles__item" type="button"></button></li>
-        </ul>
-      </section>
-      <section class="price">
-        <h2 class="visually-hidden">Цены и опции</h2>
-          <div class="price__wrapper">
-          <table class="price__tariffs price-table">
-            <tbody>
-              <tr class="price-table__table-row">
-                <th class="price-table__table-header price-table__table-header--empty"></th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">База</span>
-                   1,99 USD
-                   <div class="price-table__hit">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                </th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">Стандарт</span>
-                   3,99 USD
-                   <div class="price-table__hit price-table__hit--active">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                </th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">Анлим</span>
-                  <div class="price-table__hit">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                   9,99 USD
-                </th>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Розовый фильтр</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Смайлики</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Комментарии</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="price__toggles slider-toggles">
-            <li><button class="slider-toggles__item" type="button"></button></li>
-            <li><button class="slider-toggles__item slider-toggles__item--active" type="button"></button></li>
-            <li><button class="slider-toggles__item" type="button"></button></li>
-          </ul>
-        </div>
-      </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контактная информация</h2>
-        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <p class="contacts__telephone">
-          Звоните:
-          <a href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </p>
-        <p class="contacts__email">
-          Пишите:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="contacts__address">
-          Приезжайте в гости:
-          <address>ул. Большая Конюшенная, 19/8</address>
-        </p>
-      </section>
-      <section class="map">
-        <h2 class="visually-hidden">Наше местоположение на карте</h2>
+                <label class="achievement__name" for="achievement-3">Видел Чака Норриса</label>
+              </li>
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-4" name="achievemt-4">
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <label class="achievement__name" for="achievement-4">Накупил сувениров</label>
+              </li>
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-5" name="achievemt-5" checked>
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <label class="achievement__name" for="achievement-5">Удержал башню</label>
+              </li>
+              <li class="achievement__item">
+                <input class="achievement__checkbox visually-hidden" type="checkbox" id="achievement-6" name="achievemt-6">
+                <svg class="achievement__selected" width="22" height="16">
+                  <use xlink:href="img/sprite.svg#icon-check"></use>
+                </svg>
+                <label class="achievement__name" for="achievement-6">Разгромил отель</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest-form__fieldset contact-info">
+            <legend class="contest-form__field-name contest-form__field-name--title">Контактная информация</legend>
+            <ul class="contest-form__list">
+              <li>
+                <label class="contest-form__field-name" for="phone">Номер телефона</label>
+                <input class="contest-form__field" type="text" id="phone" name="phone" placeholder="Номер, пожалуйста">
+              </li>
+              <li>
+                <label class="contest-form__field-name" for="email">Адрес почты</label>
+                <input class="contest-form__field" type="text" id="email" name="email" placeholder="Введите почту*">
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="contest-form__fieldset os">
+            <legend class="contest-form__field-name contest-form__field-name--title">С каким приложением путешествовали?</legend>
+            <ul class="contest-form__list">
+              <li class="os__item">
+                <input class="os__radio visually-hidden" type="radio" id="pink-ios" name="os" value="ios" checked>
+                <label class="os__name" for="pink-ios">Pink для iOS</label>
+              </li>
+              <li class="os__item">
+                <input class="os__radio visually-hidden" type="radio" id="pink-android" name="os" value="android">
+                <label class="os__name" for="pink-android">Pink на Android</label>
+              </li>
+              <li class="os__item">
+                <input class="os__radio visually-hidden" type="radio" id="pink-windows" name="os" value="windows">
+                <label class="os__name" for="pink-windows">Windows Phone</label>
+              </li>
+            </ul>
+          </fieldset>
+          <div class="contest-form__emotions emotions">
+            <label class="contest-form__field-name contest-form__field-name--emotions">Опишите свои эмоции</label>
+            <textarea class="emotions__text" cols="25" rows="5" name="impressions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+          <div class="contest-form__submit">
+            <button class="contest-form__button" type="submit">Отправить форму</button>
+            <p class="contest-form__required"> &mdash; Обязательные поля</p>
+          </div>
+        </form>
       </section>
     </main>
     <footer class="page-footer">

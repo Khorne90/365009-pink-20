@@ -1,0 +1,32 @@
+.button {
+  display: inline-block;
+
+  font-weight: bold;
+  line-height: 18px;
+  vertical-align: middle;
+
+  padding-top: 14px;
+  padding-bottom: 17px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  background-color: transparent;
+  border: 3px solid #ffffff;
+  border-radius: 30px;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    font-size: 21px;
+
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+}

@@ -5,6 +5,11 @@
     <title>HTML Academy: Пинк</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+    </script>
+    <script src="js/picturefill.js" async></script>
   </head>
   <body>
     <svg style="display: none;">
@@ -30,7 +35,7 @@
       </symbol>
       <symbol viewBox="0 0 146.3 40.375" id="logo-desktop">
         <g fill="currentColor">
-          <g>
+          <g fill=>
             <path d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z"/>
             <path d="M93.603,18.5c0-0.708,0.579-1.288,1.255-1.288c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.287-1.288,1.287c-0.676,0-1.255-0.579-1.255-1.287V18.5z"/>
             <path d="M102.744,18.532c0-0.676,0.58-1.256,1.256-1.256h0.354c0.58,0,0.935,0.29,1.288,0.74l13.684,17.45V18.468 c0-0.676,0.547-1.256,1.256-1.256c0.676,0,1.224,0.58,1.224,1.256v20.349c0,0.676-0.481,1.19-1.158,1.19h-0.129c-0.548,0-0.935-0.321-1.319-0.772l-13.975-17.868v17.45c0,0.676-0.547,1.256-1.256,1.256c-0.676,0-1.223-0.58-1.223-1.256V18.532 H102.744z"/>
@@ -102,7 +107,7 @@
     <header class="page-header">
       <nav class="main-nav main-nav--opened main-nav--nojs">
         <div class="main-nav__logo">
-          <a class="main-nav__logo-link">
+          <a class="main-nav__logo-link" href="index.html">
             <svg class="main-nav__logo-mobile" width="75" height="23"><use xlink:href="#logo-mobile"></use></svg>
             <svg class="main-nav__logo-tablet" width="146.3" height="40.3"><use xlink:href="#logo-tablet"></use></svg>
             <svg class="main-nav__logo-desktop" width="146.3" height="40.3"><use xlink:href="#logo-desktop"></use></svg>
@@ -117,230 +122,188 @@
           </svg>
         </button>
         <ul class="main-nav__list site-list">
-          <li class="site-list__item"><a class="site-list__link site-list__link--active">Главная</a></li>
-          <li class="site-list__item"><a class="site-list__link" href="photo.html">Фотографии</a></li>
+          <li class="site-list__item"><a class="site-list__link" href="index.html">Главная</a></li>
+          <li class="site-list__item"><a class="site-list__link site-list__link--active">Фотографии</a></li>
           <li class="site-list__item"><a class="site-list__link" href="form.html">Конкурс</a></li>
           <li class="site-list__item"><a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <h1 class="visually-hidden">Пинк - приложение для раскраски ваших фотографий</h1>
+      <h1 class="visually-hidden">Фотогалерея</h1>
       <div class="page-main__wrapper">
-        <div class="page-main__index-bg container">
-          <p class="page-main__title page-main__title--index">Взгляните на жизнь иначе!</p>
-        </div>
+        <p class="page-main__title">Фотографии пользователей</p>
       </div>
-      <div class="page-main__app-download-wrapper">
-        <section class="app-download">
-          <h2 class="visually-hidden">Загрузить приложение Pink</h2>
-          <a class="app-download__button button" href="https://apps.apple.com/ru/app/apple-store/id375380948">Скачать приложение</a>
-          <ul class="app-download__list platform-list">
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__apple" href="https://apps.apple.com/ru/app/apple-store/id375380948">
-                <svg width="46.21px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-apple"></use>
+      <section class="users-photos">
+        <h2 class="visually-hidden">Фотографии пользователей</h2>
+        <p class="users-photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+        <article class="post post--panorama">
+          <a class="post__image-link post__image-link--panorama" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/panorama-tablet@1x.jpg 1x, img/panorama-tablet@2x.jpg 2x">
+              <img class="post__image" src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" alt="Фотография пользователя">
+            </picture>
+          </a>
+          <div class="post__message-wrapper">
+            <p class="post__user">
+              <b class="post__user-name">Анна</b> <time  class="post__time" datetime="2019-11-11">(5 МИНУТ НАЗАД)</time>
+            </p>
+            <p class="post__description post__description--panorama">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!</p>
+            <div class="post__like-wrapper post__like-wrapper--panorama">
+              <button class="post__like-button post__like-button--panorama" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
                 </svg>
-                <span class="visually-hidden">Apple</span>
-              </a>
-            </li>
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__android" href="https://play.google.com/store/apps">
-                <svg width="42.084px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-android" y="3"></use>
+              </button>
+              <span class="post__like-counter">Нравится: 215</span>
+            </div>
+          </div>
+        </article>
+        <ul class="users-photos__list photos-list">
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-car-desktop@1x.jpg 1x, img/photo-car-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-car-tablet@1x.jpg 1x, img/photo-car-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-car-mobile@1x.jpg" srcset="img/photo-car-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Левон</b> <time  class="post__time" datetime="2019-11-11">(5 часов назад)</time>
+            </p>
+            <p class="post__description">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="14">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
                 </svg>
-                <span class="visually-hidden">Android</span>
-              </a>
-            </li>
-            <li class="platform-list__item">
-              <a class="platform-list__link platform-list__microsoft" href="https://www.microsoft.com/ru-ru/store/apps/windows">
-                <svg width="42.084px" height="56.753px">
-                  <use xlink:href="img/sprite.svg#icon-microsoft" y="4"></use>
-                </svg>
-                <span class="visually-hidden">Windows</span>
-              </a>
-            </li>
-          </ul>
-          <p class="app-download__legend">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
-        </section>
-      </div>
-      <section class="app-advantages">
-        <h2 class="visually-hidden">Приемущества нашего приложения</h2>
-        <p class="app-advantages__slogan">Устали от серости мегаполиса?</p>
-        <p class="app-advantages__slogan">Нам есть, что вам предложить!</p>
-        <ul class="app-advantages__list advantages-list">
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Поднимает настроение</p>
-            <p class="advantages-list__text">Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+              </button>
+              <span class="post__like-counter">Нравится: 356</span>
+            </div>
           </li>
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Меняет мир вокруг</p>
-            <p class="advantages-list__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-drumset-desktop@1x.jpg 1x, img/photo-drumset-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-drumset-tablet@1x.jpg 1x, img/photo-drumset-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-drumset-mobile@1x.jpg" srcset="img/photo-drumset-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Антон</b> <time  class="post__time" datetime="2019-11-10">(12 часов назад)</time>
+            </p>
+            <p class="post__description">Соседи будут рады!</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <span class="post__like-counter">Нравится: 666</span>
+            </div>
           </li>
-          <li class="advantages-list__item">
-            <p class="advantages-list__slogan">Заводит новых друзей</p>
-            <p class="advantages-list__text">Ставьте лайки, комментируйте, делитись фотографиями с друзьями и заводите новых</p>
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-window-desktop@1x.jpg 1x, img/photo-window-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-window-tablet@1x.jpg 1x, img/photo-window-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-window-mobile@1x.jpg" srcset="img/photo-window-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Борис</b> <time  class="post__time" datetime="2019-11-10">(20 часов назад)</time>
+            </p>
+            <p class="post__description">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <span class="post__like-counter">Нравится: 215</span>
+            </div>
+          </li>
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-fair-desktop@1x.jpg 1x, img/photo-fair-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-fair-tablet@1x.jpg 1x, img/photo-fair-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-fair-mobile@1x.jpg" srcset="img/photo-fair-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Сергей</b> <time class="post__time" datetime="2019-11-10">(25 часов назад)</time>
+            </p>
+            <p class="post__description">Самая кубанская в мире!</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <span class="post__like-counter">Нравится: 4</span>
+            </div>
+          </li>
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-pov-desktop@1x.jpg 1x, img/photo-pov-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-pov-tablet@1x.jpg 1x, img/photo-pov-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-pov-mobile@1x.jpg" srcset="img/photo-pov-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Максим</b> <time class="post__time" datetime="2019-11-10">(40 часов назад)</time>
+            </p>
+            <p class="post__description">Где снег-то?</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <span class="post__like-counter">Нравится: 150</span>
+            </div>
+          </li>
+          <li class="photos-list__item post">
+            <a class="post__image-link" href="#">
+              <picture>
+                <source media="(min-width: 1200px)" srcset="img/photo-wing-desktop@1x.jpg 1x, img/photo-wing-desktop@2x.jpg 2x">
+                <source media="(min-width: 660px)" srcset="img/photo-wing-tablet@1x.jpg 1x, img/photo-wing-tablet@2x.jpg 2x">
+                <img class="post__image" src="img/photo-wing-mobile@1x.jpg" srcset="img/photo-wing-mobile@2x.jpg 2x" alt="Фотография пользователя">
+              </picture>
+            </a>
+            <p class="post__user">
+              <b class="post__user-name">Надежда</b> <time class="post__time" datetime="2019-11-10">(45 часов назад)</time>
+            </p>
+            <p class="post__description">Всем GM и взаимные лайки!</p>
+            <div class="post__like-wrapper">
+              <button class="post__like-button" type="button">
+                <svg width="13" height="16">
+                  <use xlink:href="img/sprite.svg#icon-heart"></use>
+                </svg>
+              </button>
+              <span class="post__like-counter">Нравится: 2560</span>
+            </div>
           </li>
         </ul>
       </section>
-      <section class="research">
-        <h2 class="visually-hidden">Научное исследование нашего приложения</h2>
-        <div class="research__wrapper">
-          <p class="research__slogan">Эффект на 24 часа!</p>
-          <p class="research__text">Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится целые сутки!</p>
-          <a class="research__link" href="#">Узнать больше об исследовании</a>
+      <section class="filters">
+        <p class="filters__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="filters__block container">
+          <picture>
+            <img src="img/photo-road-mobile@1x.jpg">
+          </picture>
+          <div class="filters__buttons">
+            <button type="button"></button>
+            <button type="button"></button>
+            <button type="button"></button>
+          </div>
+          <div class="filters__slider"></div>
+          <button class="button">Запостить</button>
+          <button class="button">Отмена</button>
         </div>
-      </section>
-      <section class="reviews">
-        <h2 class="visually-hidden">Отзывы о приложении Pink</h2>
-        <p class="reviews__autor">Николай Петров</p>
-        <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-        <ul class="slider-toggles">
-          <li><button class="slider-toggles__item slider-toggles__item--active" type="button"></button></li>
-          <li><button class="slider-toggles__item" type="button"></button></li>
-          <li><button class="slider-toggles__item" type="button"></button></li>
-        </ul>
-      </section>
-      <section class="price">
-        <h2 class="visually-hidden">Цены и опции</h2>
-          <div class="price__wrapper">
-          <table class="price__tariffs price-table">
-            <tbody>
-              <tr class="price-table__table-row">
-                <th class="price-table__table-header price-table__table-header--empty"></th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">База</span>
-                   1,99 USD
-                   <div class="price-table__hit">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                </th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">Стандарт</span>
-                   3,99 USD
-                   <div class="price-table__hit price-table__hit--active">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                </th>
-                <th class="price-table__table-header">
-                  <span class="price-table__tariff">Анлим</span>
-                  <div class="price-table__hit">
-                     <svg class="price-table__hit-tablet" width="54" height="54">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                     <svg class="price-table__hit-mobile" width="74" height="74">
-                       <use xlink:href="img/sprite.svg#hit-mobile"></use>
-                     </svg>
-                   </div>
-                   9,99 USD
-                </th>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Розовый фильтр</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Розовый фильтр</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Смайлики</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Смайлики</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-              <tr class="price-table__table-row">
-                <td class="price-table__table-data">
-                  <span class="price-table__options">Комментарии</span>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__no" width="27" height="27">
-                    <use xlink:href="img/sprite.svg#icon-no"></use>
-                  </svg>
-                </td>
-                <td class="price-table__table-data">
-                  <span class="price-table__option price-table__option--tablet">Комментарии</span>
-                  <svg class="price-table__yes" width="31" height="21">
-                    <use xlink:href="img/sprite.svg#icon-yes"></use>
-                  </svg>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          <ul class="price__toggles slider-toggles">
-            <li><button class="slider-toggles__item" type="button"></button></li>
-            <li><button class="slider-toggles__item slider-toggles__item--active" type="button"></button></li>
-            <li><button class="slider-toggles__item" type="button"></button></li>
-          </ul>
-        </div>
-      </section>
-      <section class="contacts">
-        <h2 class="visually-hidden">Контактная информация</h2>
-        <p class="contacts__title">Остались вопросы? Свяжитесь с нами!</p>
-        <p class="contacts__telephone">
-          Звоните:
-          <a href="tel:+78125556666">+7 (812) 555-66-66</a>
-        </p>
-        <p class="contacts__email">
-          Пишите:
-          <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </p>
-        <p class="contacts__address">
-          Приезжайте в гости:
-          <address>ул. Большая Конюшенная, 19/8</address>
-        </p>
-      </section>
-      <section class="map">
-        <h2 class="visually-hidden">Наше местоположение на карте</h2>
       </section>
     </main>
     <footer class="page-footer">
