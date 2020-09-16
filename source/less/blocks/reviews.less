@@ -2,9 +2,8 @@
   text-align: center;
 
   width: 100%;
-  margin-top: -55px;
-  padding-top: 50px;
-  padding-bottom: 60px;
+  margin-top: -43px;
+  padding-top: 41px;
 
   background-color: #ffffff;
 }
@@ -12,8 +11,15 @@
 .reviews__autor {
   font-weight: bold;
   margin: 0 auto;
-  padding-bottom: 31px;
+  margin-bottom: 13px;
   width: 158px;
+}
+
+.reviews__autor-info {
+  display: none;
+
+  font-size: 14px;
+  font-weight: normal;
 }
 
 .reviews__text {
@@ -21,6 +27,110 @@
   line-height: 30px;
 
   margin: 0 auto;
-  padding-bottom: 14px;
+  margin-bottom: 18px;
   width: 280px;
+}
+
+.reviews__arrow {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews__autor {
+    font-size: 20px;
+
+    margin-bottom: 22px;
+    width: 175px;
+
+    order: 2;
+  }
+
+  .reviews__autor-info {
+    display: block;
+  }
+
+  .reviews__text {
+    font-size: 18px;
+
+    margin-bottom: 36px;
+    width: 620px;
+  }
+
+  .reviews__toggles {
+    order: 3;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    position: relative;
+    padding-top: 184px;
+    padding-bottom: 31px;
+    background-image: url("../img/icon-quotes.svg");
+    background-repeat: no-repeat;
+    background-position: top 72px center;
+  }
+
+  .reviews__autor {
+    font-size: 24px;
+
+    width: 225px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .reviews__autor-info {
+    font-size: 18px;
+
+    margin-top: 2px;
+  }
+
+  .reviews__text {
+    width: 690px;
+  }
+
+  .reviews__toggles {
+    display: none;
+  }
+
+  .reviews__arrow {
+    display: block;
+    position: absolute;
+
+    top: 213px;
+
+    color: #283645;
+    opacity: 0.3;
+
+    background-color: transparent;
+
+    width: 22px;
+    height: 41px;
+    padding: 0;
+
+    border: none;
+
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.1;
+    }
+
+    &--left {
+      left: 130px;
+    }
+
+    &--right {
+      right: 130px;
+    }
+  }
 }

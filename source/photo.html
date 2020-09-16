@@ -35,7 +35,7 @@
       </symbol>
       <symbol viewBox="0 0 146.3 40.375" id="logo-desktop">
         <g fill="currentColor">
-          <g fill=>
+          <g>
             <path d="M71.874,18.661c0-0.708,0.58-1.288,1.256-1.288h7.18c5.087,0,8.436,2.704,8.436,7.146v0.064 c0,4.861-4.057,7.373-8.854,7.373h-5.475v6.825c0,0.708-0.58,1.288-1.288,1.288c-0.676,0-1.256-0.58-1.256-1.288V18.661z M79.988,29.641c3.734,0,6.182-1.996,6.182-4.959v-0.063c0-3.22-2.414-4.894-6.053-4.894h-5.699v9.917H79.988L79.988,29.641z"/>
             <path d="M93.603,18.5c0-0.708,0.579-1.288,1.255-1.288c0.709,0,1.288,0.58,1.288,1.288v20.283 c0,0.708-0.579,1.287-1.288,1.287c-0.676,0-1.255-0.579-1.255-1.287V18.5z"/>
             <path d="M102.744,18.532c0-0.676,0.58-1.256,1.256-1.256h0.354c0.58,0,0.935,0.29,1.288,0.74l13.684,17.45V18.468 c0-0.676,0.547-1.256,1.256-1.256c0.676,0,1.224,0.58,1.224,1.256v20.349c0,0.676-0.481,1.19-1.158,1.19h-0.129c-0.548,0-0.935-0.321-1.319-0.772l-13.975-17.868v17.45c0,0.676-0.547,1.256-1.256,1.256c-0.676,0-1.223-0.58-1.223-1.256V18.532 H102.744z"/>
@@ -131,13 +131,14 @@
     </header>
     <main class="page-main">
       <h1 class="visually-hidden">Фотогалерея</h1>
-      <div class="page-main__wrapper">
-        <p class="page-main__title">Фотографии пользователей</p>
-      </div>
+      <section class="intro">
+        <h2 class="intro__title">Фотографии пользователей</h2>
+      </section>
       <section class="users-photos">
         <h2 class="visually-hidden">Фотографии пользователей</h2>
         <p class="users-photos__slogan">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
         <article class="post post--panorama">
+          <h3 class="visually-hidden">Панорама</h3>
           <a class="post__image-link post__image-link--panorama" href="#">
             <picture>
               <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg 1x, img/panorama-desktop@2x.jpg 2x">
@@ -289,20 +290,64 @@
           </li>
         </ul>
       </section>
-      <section class="filters">
-        <p class="filters__title">Затмите их всех! Выкладывайте все, что накопилось в телефоне!</p>
-        <div class="filters__block container">
-          <picture>
-            <img src="img/photo-road-mobile@1x.jpg">
-          </picture>
-          <div class="filters__buttons">
-            <button type="button"></button>
-            <button type="button"></button>
-            <button type="button"></button>
-          </div>
-          <div class="filters__slider"></div>
-          <button class="button">Запостить</button>
-          <button class="button">Отмена</button>
+      <section class="editor">
+        <h2 class="visually-hidden">Редактор изображений Pink</h2>
+        <p class="editor__title">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!</p>
+        <div class="editor__wrapper">
+          <form class="editor__form">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-road-desktop@1x.jpg, img/photo-road-desktop@2x.jpg 2x">
+              <source media="(min-width: 660px)" srcset="img/photo-road-tablet@1x.jpg, img/photo-road-tablet@2x.jpg 2x">
+              <img src="img/photo-road-mobile@1x.jpg" srcset="img/photo-road-mobile@2x.jpg 2x" alt="Редактируемая фотография">
+            </picture>
+            <div class="editor__control">
+              <ul class="editor__filter-list">
+                <li class="editor__filter-item">
+                  <button class="editor__tool-button editor__tool-button--active" type="button">
+                    <svg class="editor__icon editor__icon--crop" width="48" height="48">
+                      <use xlink:href="img/sprite.svg#icon-crop"></use>
+                    </svg>
+                  </button>
+                  <div class="editor__edit">
+                    <div class="editor__range">
+                      <span class="editor__thumb editor__thumb--crop"></span>
+                    </div>
+                    <input class="editor__edit-input" type="range" name="crop">
+                  </div>
+                </li>
+                <li class="editor__filter-item">
+                  <button class="editor__tool-button" type="button">
+                    <svg class="editor__icon editor__icon--fill" width="48" height="48">
+                      <use xlink:href="img/sprite.svg#icon-fill"></use>
+                    </svg>
+                  </button>
+                  <div class="editor__edit">
+                    <div class="editor__range">
+                      <span class="editor__thumb editor__thumb--fill"></span>
+                    </div>
+                    <input class="editor__edit-input" type="range" name="fill">
+                  </div>
+                </li>
+                <li class="editor__filter-item">
+                  <button class="editor__tool-button" type="button">
+                    <svg class="editor__icon editor__icon--contrast" width="32" height="32">
+                      <use xlink:href="img/sprite.svg#icon-contrast"></use>
+                    </svg>
+                  </button>
+                  <div class="editor__edit">
+                    <div class="editor__range">
+                      <span class="editor__thumb editor__thumb--contrast"></span>
+                    </div>
+                    <input class="editor__edit-input" type="range" name="contrast">
+                  </div>
+                </li>
+              </ul>
+              <div class="editor__button-wrapper">
+                <button class="button editor__button-post" type="submit">Запостить</button>
+                <button class="button editor__button-reset" type="reset">Отмена</button>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>
@@ -341,8 +386,8 @@
       <div class="page-footer__copyright copyright">
         <span class="copyright__text">Разработано</span>
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <svg width="26.943px" height="45px">
-            <use y="6" xlink:href="img/sprite.svg#icon-academy"></use>
+          <svg width="26.943px" height="35px">
+            <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
         </a>
       </div>

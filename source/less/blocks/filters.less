@@ -1,0 +1,169 @@
+.editor__title {
+  font-size: 14px;
+  text-align: center;
+
+  width: 280px;
+  margin: 0 auto;
+  padding-bottom: 42px;
+  padding-top: 43px;
+}
+
+.editor__wrapper {
+  position: relative;
+  padding-top: 20px;
+  padding-bottom: 41px;
+
+  background-color: #f2f2f2;
+  &::before {
+    position: absolute;
+
+    content: "";
+
+    bottom: 201px;
+    width: 100%;
+    height: 1px;
+
+    background-color: fade(#283645, 10%);
+  }
+}
+
+.editor__form {
+  box-sizing: border-box;
+
+  width: 280px;
+  margin: auto;
+}
+
+.editor__filter-list {
+  display: flex;
+  justify-content: space-between;
+
+  width: 210px;
+  padding: 0;
+  margin: 0 auto;
+  padding-bottom: 112px;
+  padding-top: 32px;
+
+  list-style: none;
+}
+
+.editor__filter-item {
+  position: relative;
+
+  line-height: 0;
+}
+
+.editor__tool-button {
+  color: #283645;
+  opacity: 0.3;
+
+  width: 48px;
+  height: 48px;
+
+  padding: 0;
+  border: none;
+}
+
+.editor__tool-button:hover,
+.editor__tool-button:focus {
+  opacity: 0.5;
+}
+
+.editor__tool-button:active,
+.editor__tool-button--active {
+  color: #D22856;
+  opacity: 1;
+}
+
+.editor__icon--contrast {
+  margin-right: 12px;
+  margin-top: 2px;
+}
+
+.editor__icon--fill {
+  margin-top: 3px;
+}
+
+.editor__edit {
+  display: none;
+  position: absolute;
+
+  bottom: -48px;
+  left: -15px;
+
+  width: 240px;
+  height: 20px;
+
+  z-index: 10;
+}
+
+.editor__range {
+  position: relative;
+
+  width: 100%;
+  height: 2px;
+  margin-top: 9px;
+
+  background-color: #283645;
+}
+
+.editor__thumb {
+  position: absolute;
+
+  bottom: -7px;
+  right: 33px;
+
+  width: 14px;
+  height: 14px;
+
+  background-color: #ffffff;
+  border: 2px solid #D22856;
+  border-radius: 50%;
+  box-sizing: border-box;
+  cursor: pointer;
+  &:active {
+    background-color: #D22856;
+  }
+}
+
+.editor__edit-input {
+  display: none;
+}
+
+.editor__tool-button--active ~ .editor__edit {
+  display: block;
+}
+
+.editor__button-post {
+    color: #D22856;
+
+    padding-left: 87px;
+    padding-right: 88px;
+    margin-bottom: 12px;
+
+    border-color: #D22856;
+    .button-action(#D22856, #ffffff);
+  }
+
+.editor__button-reset {
+  color: fade(#283645, 10%);
+
+  padding-left: 100px;
+  padding-right: 101px;
+
+  border-color: fade(#283645, 10%);
+  &:hover,
+  &:focus {
+    color: fade(#283645, 30%);
+    border-color: fade(#283645, 30%);
+  }
+
+  &:active {
+    color: fade(#ffffff, 30%);
+    background-color: fade(#283645, 30%);
+    border-color: transparent;
+  }
+}
+
+
+

@@ -1,5 +1,6 @@
 .travel-contest {
-
+  padding-top: 44px;
+  padding-bottom: 1px;
 }
 
 .travel-contest__title {
@@ -8,8 +9,43 @@
 
   width: 280px;
   margin: 0 auto;
-  padding-top: 46px;
-  margin-bottom: 31px;
+  margin-bottom: 36px;
 }
 
+.travel-contest__request {
+  display: none;
+}
 
+@media (min-width: @tablet-width) {
+  .travel-contest {
+    padding-top: 91px;
+    padding-bottom: 83px;
+  }
+
+  .travel-contest__title {
+    font-size: 18px;
+
+    width: 490px;
+    margin-bottom: 72px;
+  }
+
+  .travel-contest__request {
+    display: inline;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travel-contest {
+    padding-top: 91px;
+    padding-bottom: 70px;
+  }
+
+  .travel-contest__title {
+    width: 756px;
+    margin-bottom: 65px;
+  }
+
+  .travel-contest__request {
+    display: inline;
+  }
+}
