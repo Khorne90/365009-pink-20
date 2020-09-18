@@ -4,6 +4,7 @@
   margin: 0;
   border: none;
   box-sizing: border-box;
+
   &--full-name {
     padding-bottom: 42px;
   }
@@ -50,6 +51,7 @@
   color: #d22856;
   font-size: 14px;
   text-transform: uppercase;
+
   &--field-name {
     display: block;
     margin-left: 23px;
@@ -135,11 +137,11 @@
   }
 
   &:hover.contest-form__achievement-name::before {
-      border-color: #283645;
+    border-color: #283645;
   }
 
   &:active.contest-form__achievement-name::before {
-      border-color: #d22856;
+    border-color: #d22856;
   }
 }
 
@@ -224,7 +226,7 @@
 }
 
 .contest-form__radio {
-  &:checked + .contest-form__os-name:after {
+  &:checked + .contest-form__os-name::after {
     display: block;
   }
 
@@ -281,7 +283,8 @@
   text-align: center;
 
   margin: 0;
-  &:before {
+
+  &::before {
     content: "*";
     color: #d22856;
   }
@@ -308,6 +311,7 @@
     margin: auto;
     padding-left: 58px;
     padding-right: 58px;
+
     &--full-name {
       padding-bottom: 52px;
 
@@ -348,16 +352,6 @@
     padding-right: 0;
   }
 
-  .contest-form__emotions {
-    order: 4;
-
-    width: 496px;
-  }
-
-  .contest-form__submit {
-    order: 5;
-  }
-
   .contest-form__title {
     &--field-name {
       margin-right: 21px;
@@ -387,7 +381,7 @@
     }
   }
 
-    /*ФИО*/
+  /*ФИО*/
 
   .contest-form__full-name-item {
     display: flex;
@@ -405,13 +399,13 @@
     margin-top: 0;
   }
 
-    /*-ОС-*/
+  /*-ОС-*/
 
   .contest-form__os-item {
     padding-left: 62px;
   }
 
-    /*-Контактная информация-*/
+  /*-Контактная информация-*/
 
   .contest-form__fieldset--contact-info .contest-form__title--fieldset-name {
     display: table;
@@ -422,6 +416,7 @@
 
     padding-bottom: 32px;
     margin-bottom: 37px;
+
     &::after {
       content: "";
       position: absolute;
@@ -441,21 +436,7 @@
   }
 
   .contest-form__field-text--icon {
-    // position: relative;
-
     padding-right: 77px;
-    // &::after {
-    //   content: "";
-    //   position: absolute;
-
-    //   top: 0;
-    //   right: 0;
-
-    //   width: 59px;
-    //   height: 59px;
-
-    //   background-color: #e5e5e5;
-    // }
   }
 
   .contest-form__contact-icon {
@@ -478,10 +459,11 @@
     left: 19px;
   }
 
-    /*Эмоции*/
+  /*Эмоции*/
 
   .contest-form__emotions {
     position: relative;
+    order: 4;
 
     width: 620px;
     padding-top: 45px;
@@ -502,6 +484,7 @@
   .contest-form__submit {
     display: flex;
     justify-content: space-between;
+    order: 5;
 
     width: 620px;
     margin: auto;
@@ -530,6 +513,7 @@
 
   .contest-form__fieldset {
     width: 940px;
+
     &--full-name {
       width: 435px;
       margin: 0;
@@ -607,10 +591,11 @@
     margin-bottom: 0;
   }
 
-    /*Достижения*/
+  /*Достижения*/
 
   .contest-form__achievment-item {
     width: 191px;
+
     &:nth-child(1) {
       order: 1;
     }
